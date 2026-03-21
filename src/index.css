@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0A2540;
+  --color-secondary: #00D4FF;
+  --color-accent: #635BFF;
+  --color-brand-bg: #F6F9FC;
+  --color-brand-dark: #0A2540;
+}
+
+@layer base {
+
+  *,
+  ::before,
+  ::after {
+    font-family: 'Inter', 'Roboto', 'Open Sans', 'Poppins' !important;
+  }
+
+  body {
+    background-color: var(--color-brand-bg);
+    color: #425466;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #0A2540;
+    font-family: 'Poppins', 'Inter', 'Roboto', 'Open Sans' !important;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Poppins', 'Inter', 'Roboto', 'Open Sans' !important;
+  }
+
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(135deg, #0A2540, #635BFF 50%, #00D4FF);
+  }
+
+  /* Stripe-like Mesh Gradient Animation */
+  .bg-mesh {
+    background: radial-gradient(at 0% 0%, rgba(99, 91, 255, 0.08) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(0, 212, 255, 0.08) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(99, 91, 255, 0.08) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, rgba(16, 185, 129, 0.08) 0px, transparent 50%);
+    animation: meshFlow 20s ease-in-out infinite alternate;
+  }
+
+  @keyframes meshFlow {
+    0% {
+      background-position: 0% 0%;
+    }
+
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+
+  /* Deep sleek shadow like Stripe cards */
+  .shadow-super-layered {
+    box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.12),
+      0 30px 60px -30px rgba(0, 0, 0, 0.15),
+      inset 0 -2px 6px 0 rgba(10, 37, 64, 0.02);
+  }
+
+  .shadow-float {
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+      0 8px 16px -8px rgba(0, 0, 0, 0.3),
+      0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  }
+
+  /* Premium Linear/Stripe glowing edge card */
+  .card-premium {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04),
+      0 2px 4px rgba(0, 0, 0, 0.04),
+      0 4px 8px rgba(0, 0, 0, 0.04),
+      0 8px 16px rgba(0, 0, 0, 0.04),
+      0 16px 32px rgba(0, 0, 0, 0.04),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .card-premium:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04),
+      0 4px 8px rgba(0, 0, 0, 0.04),
+      0 16px 32px rgba(50, 50, 93, 0.08),
+      0 32px 64px rgba(50, 50, 93, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 1);
+    border: 1px solid rgba(99, 91, 255, 0.4);
+  }
+
+  /* Animated Glowing Border Container - Ultra Refined */
+  .glowing-border-wrapper {
+    position: relative;
+    border-radius: inherit;
+    z-index: 1;
+  }
+
+  .glowing-border-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    z-index: -1;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(99, 91, 255, 0.6), rgba(0, 212, 255, 0.6), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .glowing-border-wrapper:hover::before {
+    opacity: 1;
+  }
+
+  /* Additional glass utilities */
+  .glass-panel-dark {
+    background: rgba(10, 37, 64, 0.4);
+    backdrop-filter: blur(24px) saturate(150%);
+    -webkit-backdrop-filter: blur(24px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  /* Subpixel precision line dividers */
+  .hairline-b {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .hairline-t {
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+}
+
+/* Custom Scrollbar - Minimal */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
