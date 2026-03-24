@@ -4,21 +4,38 @@ import { ChevronLeft, ChevronRight, Quote, Star } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: "Partnering with Finovate was the best operational decision we made this year. We reduced our backlog by 80% in the first three months, and the offshore team’s knowledge of UK GAAP is outstanding.",
+    quote: "Partnering with Finovate was the best operational decision we made this year. We reduced our backlog by 80% in the first three months, and our offshore team’s knowledge of UK GAAP is outstanding.",
     name: "James Harrington",
-    role: "Managing Partner, Harrington & Co.",
+    role: "Managing Partner",
+    company: "Harrington & Co.",
     rating: 5,
   },
   {
     quote: "The quality of work on our Year-End accounts has been phenomenal. We managed to scale our firm's client base by over 40% without the headache of local recruitment struggles.",
     name: "Sarah Jenkins",
-    role: "Director, Jenkins Financial Group",
+    role: "Director",
+    company: "Jenkins Financial Group",
     rating: 5,
   },
   {
     quote: "Finovate’s GDPR compliant infrastructure and ISO certified processes put us completely at ease. The team feels like a direct extension of our own London office.",
     name: "David O'Connor",
-    role: "Senior Accountant, Elite Business Solutions",
+    role: "Senior Accountant",
+    company: "Elite Business Solutions",
+    rating: 5,
+  },
+  {
+    quote: "Their MTD for ITSA prep has been an absolute lifesaver. Handing over our quarterly filing volumes to Finovate completely eliminated our seasonal burnout.",
+    name: "Emily Croft",
+    role: "Head of Tax",
+    company: "Croft & Associates",
+    rating: 5,
+  },
+  {
+    quote: "We save at least £120k annually using Finovate's bookkeeping operations. The cost difference is night and day, but more impressively, the precision is flawless.",
+    name: "Michael Chen",
+    role: "Founder",
+    company: "Chen Accounting Partners",
     rating: 5,
   }
 ];
@@ -77,8 +94,10 @@ const Testimonials = () => {
                   "{testimonials[currentIndex].quote}"
                 </p>
                 <div>
-                  <h4 className="font-display font-bold text-[#0A2540] text-[16px] mb-0.5">{testimonials[currentIndex].name}</h4>
-                  <span className="text-[12px] text-gray-500 font-bold uppercase tracking-[0.1em]">{testimonials[currentIndex].role}</span>
+                  <h4 className="font-display font-bold text-[#0A2540] text-[18px] mb-1">{testimonials[currentIndex].name}</h4>
+                  <span className="text-[13px] text-gray-500 font-bold tracking-tight uppercase block">
+                    {testimonials[currentIndex].role} <span className="text-[#635BFF] ml-1">@ {testimonials[currentIndex].company}</span>
+                  </span>
                 </div>
               </motion.div>
             </AnimatePresence>

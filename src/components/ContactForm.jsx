@@ -38,8 +38,8 @@ const ContactForm = () => {
             viewport={{ once: true, delay: 0.1 }}
             className="text-[28px] lg:text-[36px] font-display font-bold tracking-[-0.02em] text-[#0A2540] mb-6 leading-[1.15]"
           >
-            Scale your firm without <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#635BFF] to-[#00D4FF]">increasing overhead.</span>
+            Let us help you scale your firm <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#635BFF] to-[#00D4FF]">without increasing overhead.</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
@@ -91,7 +91,7 @@ const ContactForm = () => {
                   <input
                     type="text"
                     required
-                    className="w-full bg-[#F6F9FC] border border-gray-200 rounded-[12px] px-4 py-3.5 text-[15px] text-[#0A2540] font-medium tracking-tight focus:bg-white focus:border-[#635BFF] focus:ring-4 focus:ring-[#635BFF]/10 transition-all outline-none"
+                    className="w-full bg-[#F6F9FC] border border-gray-200 rounded-[12px] px-4 py-3.5 text-[15px] text-[#0A2540] font-medium tracking-tight hover:border-gray-300 hover:bg-white focus:-translate-y-0.5 focus:bg-white focus:border-[#635BFF] focus:ring-[4px] focus:ring-[#635BFF]/15 focus:shadow-[0_8px_20px_-5px_rgba(99,91,255,0.15)] transition-all duration-300 outline-none"
                     placeholder="John"
                   />
                 </div>
@@ -100,7 +100,7 @@ const ContactForm = () => {
                   <input
                     type="text"
                     required
-                    className="w-full bg-[#F6F9FC] border border-gray-200 rounded-[12px] px-4 py-3.5 text-[15px] text-[#0A2540] font-medium tracking-tight focus:bg-white focus:border-[#635BFF] focus:ring-4 focus:ring-[#635BFF]/10 transition-all outline-none"
+                    className="w-full bg-[#F6F9FC] border border-gray-200 rounded-[12px] px-4 py-3.5 text-[15px] text-[#0A2540] font-medium tracking-tight hover:border-gray-300 hover:bg-white focus:-translate-y-0.5 focus:bg-white focus:border-[#635BFF] focus:ring-[4px] focus:ring-[#635BFF]/15 focus:shadow-[0_8px_20px_-5px_rgba(99,91,255,0.15)] transition-all duration-300 outline-none"
                     placeholder="Smith"
                   />
                 </div>
@@ -111,7 +111,7 @@ const ContactForm = () => {
                 <input
                   type="email"
                   required
-                  className="w-full bg-[#F6F9FC] border border-gray-200 rounded-[12px] px-4 py-3.5 text-[15px] text-[#0A2540] font-medium tracking-tight focus:bg-white focus:border-[#635BFF] focus:ring-4 focus:ring-[#635BFF]/10 transition-all outline-none"
+                  className="w-full bg-[#F6F9FC] border border-gray-200 rounded-[12px] px-4 py-3.5 text-[15px] text-[#0A2540] font-medium tracking-tight hover:border-gray-300 hover:bg-white focus:-translate-y-0.5 focus:bg-white focus:border-[#635BFF] focus:ring-[4px] focus:ring-[#635BFF]/15 focus:shadow-[0_8px_20px_-5px_rgba(99,91,255,0.15)] transition-all duration-300 outline-none"
                   placeholder="john@firm.co.uk"
                 />
               </div>
@@ -120,7 +120,7 @@ const ContactForm = () => {
                 <label className="text-[13px] font-bold text-[#0A2540] uppercase tracking-wide">Company Size</label>
                 <select
                   required
-                  className="w-full bg-[#F6F9FC] border border-gray-200 rounded-[12px] px-4 py-3.5 text-[15px] text-[#0A2540] font-medium tracking-tight focus:bg-white focus:border-[#635BFF] focus:ring-4 focus:ring-[#635BFF]/10 transition-all outline-none appearance-none"
+                  className="w-full bg-[#F6F9FC] border border-gray-200 rounded-[12px] px-4 py-3.5 text-[15px] text-[#0A2540] font-medium tracking-tight hover:border-gray-300 hover:bg-white focus:-translate-y-0.5 focus:bg-white focus:border-[#635BFF] focus:ring-[4px] focus:ring-[#635BFF]/15 focus:shadow-[0_8px_20px_-5px_rgba(99,91,255,0.15)] transition-all duration-300 outline-none appearance-none"
                 >
                   <option value="" disabled selected>Select firm size...</option>
                   <option value="1-10">1 - 10 employees</option>
@@ -135,16 +135,16 @@ const ContactForm = () => {
                 <textarea
                   rows="4"
                   required
-                  className="w-full bg-[#F6F9FC] border border-gray-200 rounded-[12px] px-4 py-3.5 text-[15px] text-[#0A2540] font-medium tracking-tight focus:bg-white focus:border-[#635BFF] focus:ring-4 focus:ring-[#635BFF]/10 transition-all outline-none resize-none"
+                  className="w-full bg-[#F6F9FC] border border-gray-200 rounded-[12px] px-4 py-3.5 text-[15px] text-[#0A2540] font-medium tracking-tight hover:border-gray-300 hover:bg-white focus:-translate-y-0.5 focus:bg-white focus:border-[#635BFF] focus:ring-[4px] focus:ring-[#635BFF]/15 focus:shadow-[0_8px_20px_-5px_rgba(99,91,255,0.15)] transition-all duration-300 outline-none resize-none"
                   placeholder="Tell us about your current operational bottlenecks..."
                 ></textarea>
               </div>
 
-              <div className="pt-2">
+              <div className="pt-4">
                 <Button
                   type="submit"
                   variant="primary"
-                  className="w-full group disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed disabled:shadow-none"
+                  className="w-full group disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed disabled:shadow-none !h-[50px] text-[16px] shadow-[0_4px_15px_-3px_rgba(20,184,166,0.3)] hover:-translate-y-0.5"
                   disabled={formState === 'submitting' || formState === 'success'}
                 >
                   <AnimatePresence mode="wait">
@@ -171,6 +171,10 @@ const ContactForm = () => {
                     )}
                   </AnimatePresence>
                 </Button>
+                <div className="flex items-center justify-center gap-2 mt-5 text-[13px] text-gray-500 font-medium">
+                  <CheckCircle2 className="w-4 h-4 text-[#10B981]" />
+                  <span>We respond to all enquiries within <strong>24 hours</strong>.</span>
+                </div>
               </div>
             </form>
           </div>

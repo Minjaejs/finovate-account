@@ -15,12 +15,23 @@ const Footer = () => {
             <a href="#home" className="text-[28px] font-display font-black text-[#0A2540] tracking-tight mb-6 inline-block hover:text-[#635BFF] transition-colors">
               Finovate
             </a>
-            <p className="text-[16px] leading-[1.6] mb-8 font-medium max-w-sm">
-              Empowering UK & Ireland accounting firms with dedicated, highly-trained, and secure offshore infrastructure. Scale effortlessly.
+            <p className="text-[16px] leading-[1.6] mb-6 font-medium max-w-sm">
+              Empowering top UK accounting firms with dedicated, highly-trained, and fully compliant offshore infrastructure.
             </p>
-            <div className="flex items-center gap-3 text-[#10B981] bg-[#10B981]/10 w-max px-3 py-1.5 rounded-full border border-[#10B981]/20">
-              <ShieldCheck className="w-4 h-4" />
-              <span className="text-[12px] font-bold tracking-[0.1em] uppercase font-display">SOC2 & GDPR Audited</span>
+            
+            <div className="flex flex-col gap-3 mb-8">
+              <div className="flex items-center gap-3 text-[#10B981]">
+                <ShieldCheck className="w-5 h-5 flex-shrink-0" />
+                <span className="text-[13px] font-bold tracking-tight uppercase font-display">100% GDPR, ICO & SOC2 Compliant</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="flex -space-x-2">
+                  <div className="w-6 h-6 rounded-full bg-gray-200 border-2 border-white shadow-sm flex items-center justify-center overflow-hidden"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&q=80" alt="avatar" className="w-full h-full object-cover" /></div>
+                  <div className="w-6 h-6 rounded-full bg-gray-300 border-2 border-white shadow-sm flex items-center justify-center overflow-hidden"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&q=80" alt="avatar" className="w-full h-full object-cover" /></div>
+                  <div className="w-6 h-6 rounded-full bg-[#14B8A6] border-2 border-white shadow-sm flex items-center justify-center text-[10px] text-white font-bold leading-none">+</div>
+                </div>
+                <span className="text-[13px] font-medium text-gray-500 ml-1">Trusted by 100+ Firms</span>
+              </div>
             </div>
           </div>
 

@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import { Lock, Server, FileWarning, Key, ShieldCheck, DatabaseBackup } from 'lucide-react';
 
 const securityFeatures = [
-  { icon: <Lock className="w-5 h-5" />, title: 'Strict GDPR Compliance', text: 'All client information is handled under secure access management protocols.' },
-  { icon: <Key className="w-5 h-5" />, title: 'Restricted Systems', text: 'Monitored workflows and controlled data access with strict biometric entry.' },
-  { icon: <ShieldCheck className="w-5 h-5" />, title: 'Confidentiality Agreements', text: 'Every team member signs rigorous NDAs that ensure privacy remains fully protected.' },
-  { icon: <Server className="w-5 h-5" />, title: 'Internal Data Controls', text: 'We strictly follow structured internal data protection controls globally.' },
+  { icon: <Lock className="w-6 h-6" />, title: 'Strict GDPR Compliance', text: 'All client information is handled under secure access management protocols.' },
+  { icon: <Key className="w-6 h-6" />, title: 'Restricted Systems', text: 'Monitored workflows and controlled data access with strict biometric entry.' },
+  { icon: <ShieldCheck className="w-6 h-6" />, title: 'Confidentiality Agreements', text: 'Every team member signs rigorous NDAs that ensure privacy remains fully protected.' },
+  { icon: <Server className="w-6 h-6" />, title: 'Internal Data Controls', text: 'We strictly follow structured internal data protection controls globally.' },
 ];
 
 const Security = () => {
@@ -45,7 +45,7 @@ const Security = () => {
               viewport={{ once: true, delay: 0.2 }}
               className="text-[16px] lg:text-[18px] text-blue-50/70 leading-[1.65] font-medium tracking-tight"
             >
-              We strictly follow GDPR-compliant processes supported by structured internal data protection controls. Confidentiality agreements, controlled data access, and monitored workflows ensure your firm’s information and your clients’ privacy remain fully protected at all times.
+              We strictly follow GDPR-compliant processes supported by structured internal data protection controls. All client information is handled under secure access management protocols with restricted system permissions. Confidentiality agreements, controlled data access, and monitored workflows ensure your firm’s information and your clients’ privacy remain fully protected at all times.
             </motion.p>
           </div>
 
@@ -58,17 +58,20 @@ const Security = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               >
-                <div className="glass-panel-dark h-full rounded-[24px] p-8 lg:p-10 hover:bg-white/10 hover:border-[#635BFF]/40 border border-[#334155]/60 transition-all duration-500 ease-[0.16_1_0.3_1] group cursor-default shadow-[0_4px_25px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_35px_rgba(99,91,255,0.15)] hover:-translate-y-2">
-                  <div className="flex items-start gap-5 mb-5">
-                    <div className="p-3 bg-[#0A2540] border border-[#635BFF]/30 rounded-[12px] text-[#00D4FF] group-hover:scale-110 group-hover:bg-[#635BFF] group-hover:text-white transition-all duration-500 ease-[0.16_1_0.3_1] shadow-inner">
+                <div className="h-full rounded-[24px] p-8 lg:p-12 bg-gradient-to-br from-[#1E293B]/80 to-transparent border border-[#334155] transition-all duration-500 ease-[0.16_1_0.3_1] group cursor-default shadow-[0_4px_25px_rgba(0,0,0,0.3)] hover:shadow-[0_0_40px_rgba(99,91,255,0.2)] hover:border-[#635BFF]/50 hover:-translate-y-2 relative overflow-hidden backdrop-blur-md">
+                   {/* Background Glow */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#635BFF]/0 to-[#00D4FF]/0 group-hover:from-[#635BFF]/10 group-hover:to-[#00D4FF]/10 transition-colors duration-500 pointer-events-none"></div>
+
+                  <div className="flex flex-col gap-6 relative z-10">
+                    <div className="inline-flex items-center justify-center w-14 h-14 bg-[#0A2540] border border-[#635BFF]/30 rounded-[16px] text-[#00D4FF] group-hover:scale-110 group-hover:bg-[#635BFF] group-hover:text-white group-hover:border-[#635BFF] transition-all duration-500 ease-[0.16_1_0.3_1] shadow-[0_0_15px_rgba(0,212,255,0.1)] group-hover:shadow-[0_0_25px_rgba(99,91,255,0.4)]">
                       {feature.icon}
                     </div>
-                  </div>
-                  <div>
-                    <h3 className="text-[18px] font-display font-bold mb-3 text-white tracking-tight">{feature.title}</h3>
-                    <p className="text-blue-50/60 text-[14px] leading-[1.65] font-medium tracking-tight">
-                      {feature.text}
-                    </p>
+                    <div>
+                      <h3 className="text-[20px] font-display font-bold mb-3 text-white tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-blue-200 transition-all">{feature.title}</h3>
+                      <p className="text-blue-50/70 text-[15px] leading-[1.65] font-medium tracking-tight">
+                        {feature.text}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </motion.div>

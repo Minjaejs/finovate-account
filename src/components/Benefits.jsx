@@ -3,10 +3,12 @@ import { motion } from 'framer-motion';
 import { Shield, Zap, TrendingUp, Monitor, CheckCircle } from 'lucide-react';
 
 const benefits = [
-  { icon: <TrendingUp className="w-[18px] h-[18px] text-[#6366F1]" />, title: '60–70% Cost Reduction', text: 'Trim operational overhead and eliminate local capital drains to immediately increase your profit margins.' },
-  { icon: <Shield className="w-[18px] h-[18px] text-[#14B8A6]" />, title: 'Dedicated Exclusive Team', text: 'Your offshore talent integrates entirely as a dedicated extension working exclusively for your own firm.' },
-  { icon: <Zap className="w-[18px] h-[18px] text-[#F5B324]" />, title: 'Flexible & Scalable Resource Model', text: 'Seamlessly scale capacity during tax seasons without the operational risk of standard hiring cycles.' },
-  { icon: <Monitor className="w-[18px] h-[18px] text-[#10B981]" />, title: 'No Office or Infrastructure Costs', text: 'Workstations, software licencing, and HR management overhead are handled entirely on our end.' },
+  { icon: <TrendingUp className="w-[20px] h-[20px] text-[#6366F1]" />, title: '60–70% Cost Reduction', text: 'Significantly lower your overhead compared to domestic hiring.' },
+  { icon: <Shield className="w-[20px] h-[20px] text-[#14B8A6]" />, title: 'Dedicated Team Working Exclusively for Your Firm', text: 'Your offshore talent acts as a direct, exclusive extension of your UK office.' },
+  { icon: <Zap className="w-[20px] h-[20px] text-[#F5B324]" />, title: 'Flexible & Scalable Resource Model', text: 'Quickly scale capacity according to seasonal demands without hiring friction.' },
+  { icon: <CheckCircle className="w-[20px] h-[20px] text-[#10B981]" />, title: 'Reduced Operational & Hiring Risk', text: 'Bypass the slow and risky domestic recruitment cycle completely.' },
+  { icon: <Monitor className="w-[20px] h-[20px] text-[#00D4FF]" />, title: 'No Office or Infrastructure Costs', text: 'We handle all hardware, software, office space, and HR management.' },
+  { icon: <TrendingUp className="w-[20px] h-[20px] text-[#635BFF]" />, title: 'Increased Profit Margins', text: 'Direct capital savings drop immediately to your bottom line.' },
 ];
 
 const Benefits = () => {
@@ -73,8 +75,11 @@ const Benefits = () => {
                     <div className="w-[14px] h-[14px] rounded-full bg-[#F8FAFC] border-[3px] border-[#14B8A6] shadow-[0_0_12px_rgba(20,184,166,0.5)] group-hover:scale-125 group-hover:bg-[#14B8A6] transition-all duration-300"></div>
                   </div>
 
-                  <div className="card-premium relative z-10 p-8 sm:ml-[70px] lg:ml-[80px] hover:-translate-y-1.5 duration-400 ease-[0.16_1_0.3_1]">
-                    <div className="mb-6 inline-flex relative w-[46px] h-[46px] rounded-[14px] items-center justify-center bg-[#F8FAFC] border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.02)] group-hover:shadow-[0_8px_16px_-4px_rgba(20,184,166,0.2)] group-hover:bg-white group-hover:border-[#14B8A6]/30 transition-all duration-500 ease-[0.16_1_0.3_1]">
+                  <div className="card-premium relative z-10 p-8 sm:ml-[70px] lg:ml-[80px] hover:-translate-y-1.5 duration-500 ease-[0.16_1_0.3_1] hover:shadow-[0_20px_40px_-15px_rgba(20,184,166,0.2)] hover:border-[#14B8A6]/30 bg-white border border-gray-100 rounded-[24px]">
+                    {/* Hover Glow Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#14B8A6]/0 to-[#6366F1]/0 group-hover:from-[#14B8A6]/5 group-hover:to-[#6366F1]/5 rounded-[24px] pointer-events-none transition-colors duration-500"></div>
+
+                    <div className="mb-6 inline-flex relative w-[48px] h-[48px] rounded-[14px] items-center justify-center bg-[#F8FAFC] border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.02)] group-hover:shadow-[0_0_20px_rgba(20,184,166,0.4)] group-hover:bg-[#14B8A6] group-hover:border-[#14B8A6] transition-all duration-500 ease-[0.16_1_0.3_1] [&>svg]:group-hover:text-white">
                       {benefit.icon}
                     </div>
                     <div>

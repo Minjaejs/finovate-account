@@ -1,11 +1,12 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
+import { Search, UserCheck, Laptop, Rocket } from 'lucide-react';
 
 const steps = [
-  { step: '01', title: 'Consultation & Discovery', text: 'We map out your firm’s goals, current workload bottlenecks, and the precise velocity metrics you need.' },
-  { step: '02', title: 'Sourcing & Verification', text: 'Our specialized recruiting engine algorithmically matches you with candidates from our top 2% vetted talent pool.' },
-  { step: '03', title: 'Systems Onboarding', text: 'Your new team members undergo SOC2-compliant training on your firm’s specific tech stack and communication protocols.' },
-  { step: '04', title: 'Live Deployment', text: 'Your fully dedicated offshore unit begins production within our encrypted facility, scaling your output immediately.' },
+  { step: '01', icon: <Search className="w-6 h-6 text-[#14B8A6]" />, title: 'Consultation & Discovery', text: 'We map out your firm’s goals, current workload bottlenecks, and the precise velocity metrics you need.' },
+  { step: '02', icon: <UserCheck className="w-6 h-6 text-[#6366F1]" />, title: 'Sourcing & Verification', text: 'Our specialized recruiting engine algorithmically matches you with candidates from our top 2% vetted talent pool.' },
+  { step: '03', icon: <Laptop className="w-6 h-6 text-[#10B981]" />, title: 'Systems Onboarding', text: 'Your new team members undergo SOC2-compliant training on your firm’s specific tech stack and communication protocols.' },
+  { step: '04', icon: <Rocket className="w-6 h-6 text-[#00D4FF]" />, title: 'Live Deployment', text: 'Your fully dedicated offshore unit begins production within our encrypted facility, scaling your output immediately.' },
 ];
 
 const HowItWorks = () => {
@@ -57,6 +58,9 @@ const HowItWorks = () => {
 
         {/* Premium Redesigned Stepper */}
         <div className="relative">
+          {/* Animated Stepper Line */}
+          <div className="absolute top-1/2 left-0 w-full h-1 bg-[#1E293B] -translate-y-1/2 hidden lg:block rounded-full"></div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 relative z-10">
             {steps.map((step, index) => (
               <motion.div
@@ -67,21 +71,19 @@ const HowItWorks = () => {
                 transition={{ delay: index * 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
                 className="group relative"
               >
-                <div className="flex-1 h-full bg-gradient-to-b from-white/[0.04] to-transparent border border-[#334155]/60 rounded-[24px] p-8 lg:p-10 backdrop-blur-sm group-hover:bg-gradient-to-b group-hover:from-[#14B8A6]/10 group-hover:to-transparent transition-all duration-500 ease-[0.16_1_0.3_1] relative overflow-hidden group-hover:-translate-y-2 flex flex-col justify-start">
-                  <div className="absolute top-0 left-0 w-full h-full bg-noise opacity-[0.02] mix-blend-overlay pointer-events-none"></div>
-
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-[14px] bg-white/5 border border-white/10 mb-8 group-hover:border-[#14B8A6]/40 group-hover:bg-[#14B8A6] group-hover:shadow-[0_0_25px_rgba(20,184,166,0.3)] transition-all duration-400">
-                    <span className="text-[18px] font-display font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 group-hover:from-white group-hover:to-white transition-all tracking-tighter">
-                      {step.step}
-                    </span>
+                <div className="flex-1 h-full bg-gradient-to-b from-[#1E293B]/80 to-transparent border border-[#334155] rounded-[24px] p-8 lg:p-10 backdrop-blur-sm group-hover:from-[#14B8A6]/10 group-hover:to-transparent group-hover:border-[#14B8A6]/40 hover:shadow-[0_0_40px_rgba(20,184,166,0.1)] transition-all duration-500 ease-[0.16_1_0.3_1] relative overflow-hidden group-hover:-translate-y-3 flex flex-col justify-start">
+                  
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-[16px] bg-[#0F172A] border border-[#334155] mb-8 group-hover:border-[#14B8A6] group-hover:bg-[#14B8A6]/10 shadow-[inset_0_2px_10px_rgba(255,255,255,0.05)] transition-all duration-400 relative">
+                     <span className="absolute -top-3 -right-3 text-[10px] bg-[#1E293B] border border-[#334155] px-2 py-0.5 rounded-full font-bold text-gray-400 group-hover:text-white group-hover:bg-[#14B8A6] transition-colors">{step.step}</span>
+                     <div className="group-hover:scale-110 transition-transform">{step.icon}</div>
                   </div>
 
-                  <h3 className="text-[18px] lg:text-[20px] font-display font-bold text-white mb-3 tracking-tight group-hover:text-[#14B8A6] transition-colors duration-300">{step.title}</h3>
-                  <p className="text-[14px] lg:text-[15px] text-blue-50/60 leading-[1.65] font-medium tracking-tight">
+                  <h3 className="text-[18px] lg:text-[20px] font-display font-bold text-white mb-3 tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#14B8A6] group-hover:to-[#00D4FF] transition-all duration-300">{step.title}</h3>
+                  <p className="text-[14px] lg:text-[15px] text-blue-50/60 leading-[1.65] font-medium tracking-tight group-hover:text-blue-50/90 transition-colors">
                     {step.text}
                   </p>
 
-                  <div className="w-8 h-[3px] bg-gradient-to-r from-[#14B8A6] to-[#6366F1] rounded-full mt-auto pt-8 opacity-40 group-hover:opacity-100 group-hover:w-16 transition-all duration-500 ease-[0.16_1_0.3_1]"></div>
+                  <div className="w-8 h-[3px] bg-gradient-to-r from-[#14B8A6] to-[#6366F1] rounded-full mt-auto pt-8 opacity-40 group-hover:opacity-100 group-hover:w-full transition-all duration-500 ease-[0.16_1_0.3_1]"></div>
                 </div>
               </motion.div>
             ))}

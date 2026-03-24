@@ -5,7 +5,7 @@ import Button from './ui/Button';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative pt-[100px] pb-24 lg:pt-[120px] lg:pb-[140px] overflow-hidden bg-white z-10">
+    <section id="home" className="relative pt-12 pb-24 lg:pt-16 lg:pb-[140px] overflow-hidden bg-white z-10">
       {/* Precision Sweeping Background Stripe Style */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-[80vw] lg:w-[60vw] h-full bg-[#F6F9FC] transform -skew-x-12 translate-x-32 z-0" />
@@ -66,13 +66,24 @@ const Hero = () => {
               </div>
               <div className="flex items-center gap-2.5 group cursor-default hover:bg-[#F8FAFC] px-3 py-2 rounded-lg transition-colors duration-300">
                 <Activity className="h-5 w-5 text-[#14B8A6] group-hover:scale-110 transition-transform duration-300" />
-                <span><strong className="text-[#0F172A]">100%</strong> Dedicated Model</span>
+                <span><strong className="text-[#0F172A]">100%</strong> Dedicated Team</span>
+              </div>
+              <div className="flex items-center gap-2.5 group cursor-default hover:bg-[#F8FAFC] px-3 py-2 rounded-lg transition-colors duration-300">
+                <div className="flex -space-x-2">
+                  <div className="w-6 h-6 rounded-full bg-gray-200 border-2 border-white shadow-sm flex items-center justify-center overflow-hidden"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&q=80" alt="avatar" className="w-full h-full object-cover" /></div>
+                  <div className="w-6 h-6 rounded-full bg-gray-300 border-2 border-white shadow-sm flex items-center justify-center overflow-hidden"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&q=80" alt="avatar" className="w-full h-full object-cover" /></div>
+                  <div className="w-6 h-6 rounded-full bg-[#14B8A6] border-2 border-white shadow-sm flex items-center justify-center text-[10px] text-white font-bold leading-none">+</div>
+                </div>
+                <span>Trusted by UK Firms</span>
               </div>
             </div>
           </motion.div>
 
           {/* High-End Photographic Hero Showcase */}
           <div className="relative w-full max-w-[650px] mx-auto lg:ml-auto h-[450px] lg:h-[600px] z-20 hidden md:block perspective-[2000px]">
+
+            {/* Glowing blur behind the cards to give a premium feel */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-tr from-[#14B8A6]/30 to-[#6366F1]/30 blur-[120px] rounded-full z-0 pointer-events-none"></div>
 
             <motion.div
               initial={{ opacity: 0, rotateX: 10, rotateY: -10, rotateZ: 2, scale: 0.95 }}
@@ -85,18 +96,33 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-[#0F172A]/[0.02] mix-blend-multiply z-10 transition-opacity duration-700 group-hover:bg-[#0F172A]/0 pointer-events-none" />
 
                 <img
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600"
-                  alt="Financial Accounting and Data Analysis"
-                  className="w-full h-full object-cover scale-[1.03] group-hover:scale-105 transition-transform duration-[2s] ease-out object-center"
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600"
+                  alt="Animated Dashboard and Floating Cards"
+                  className="w-full h-full object-cover scale-[1.03] group-hover:scale-105 transition-transform duration-[2s] ease-out object-center opacity-90"
                 />
 
                 {/* Integrated Floating Graphic inside the image */}
                 <div className="absolute top-8 left-8 right-8 flex justify-between items-start z-20">
-                  <div className="flex gap-2 bg-white/40 backdrop-blur-xl px-3 py-1.5 rounded-full border border-white/40 shadow-sm">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#14B8A6] animate-pulse mt-0.5" />
-                    <span className="text-[10px] font-bold text-[#0F172A] uppercase tracking-[0.1em] font-display">Active Offshore Link</span>
+                  <div className="flex gap-2 bg-white/60 backdrop-blur-xl px-4 py-2 rounded-full border border-white/60 shadow-sm align-middle h-8">
+                    <div className="w-2 h-2 rounded-full bg-[#10B981] animate-pulse mt-0.5" />
+                    <span className="text-[10px] font-bold text-[#0F172A] uppercase tracking-[0.1em] font-display">Live Operations Sync</span>
                   </div>
                 </div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.8, duration: 0.6 }}
+                  className="absolute bottom-8 right-8 bg-white/80 backdrop-blur-md p-4 rounded-xl shadow-lg border border-white/40 flex items-center gap-4 z-20"
+                >
+                  <div className="w-10 h-10 rounded-full bg-[#6366F1]/10 flex items-center justify-center">
+                    <PieChart className="w-5 h-5 text-[#6366F1]" />
+                  </div>
+                  <div>
+                    <div className="text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-0.5">Efficiency Gain</div>
+                    <div className="text-[18px] font-black text-[#0F172A]">+240%</div>
+                  </div>
+                </motion.div>
               </div>
             </motion.div>
 
@@ -105,28 +131,28 @@ const Hero = () => {
               initial={{ opacity: 0, x: -80, y: 50 }}
               animate={{ opacity: 1, x: -40, y: 30 }}
               transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
-              className="absolute bottom-[20%] lg:bottom-[15%] left-[-40px] w-[280px] bg-white/90 backdrop-blur-2xl rounded-[20px] shadow-[0_30px_60px_-15px_rgba(15,23,42,0.2)] border border-white/50 p-6 z-30"
+              className="absolute bottom-[20%] lg:bottom-[15%] left-[-40px] w-[280px] bg-white/95 backdrop-blur-2xl rounded-[20px] shadow-[0_30px_60px_-15px_rgba(15,23,42,0.25)] border border-white p-6 z-30 transform hover:-translate-y-2 hover:shadow-[0_40px_80px_-15px_rgba(15,23,42,0.3)] transition-all duration-500"
             >
               <div className="flex items-center gap-4 mb-4 pb-4 border-b border-gray-100">
-                <div className="w-12 h-12 bg-[#F8FAFC] text-[#14B8A6] rounded-[12px] border border-gray-100 shadow-sm flex items-center justify-center shrink-0">
-                  <Activity className="w-6 h-6 stroke-[2.5]" />
+                <div className="w-12 h-12 bg-gradient-to-br from-[#14B8A6] to-[#00D4FF] text-white rounded-[12px] shadow-md flex items-center justify-center shrink-0">
+                  <BarChart3 className="w-6 h-6 stroke-[2]" />
                 </div>
                 <div>
-                  <div className="text-[10px] text-gray-500 font-bold tracking-[0.15em] uppercase mb-1 font-display">Deployment</div>
-                  <div className="text-[16px] font-display font-black text-[#0F172A] tracking-tight leading-none">Global Extension</div>
+                  <div className="text-[10px] text-gray-500 font-bold tracking-[0.15em] uppercase mb-1 font-display">Overhead Cost</div>
+                  <div className="text-[16px] font-display font-black text-[#0F172A] tracking-tight leading-none">Reduced by 60-70%</div>
                 </div>
               </div>
               <div className="flex justify-between items-center">
                 <div className="flex gap-1.5 items-end h-8">
-                  <div className="w-1.5 h-5 bg-[#14B8A6] rounded-full animate-pulse"></div>
-                  <div className="w-1.5 h-3 bg-[#14B8A6]/40 rounded-full"></div>
-                  <div className="w-1.5 h-7 bg-[#14B8A6] rounded-full animate-pulse"></div>
+                  <div className="w-1.5 h-6 bg-[#14B8A6] rounded-full animate-pulse"></div>
                   <div className="w-1.5 h-4 bg-[#14B8A6]/40 rounded-full"></div>
-                  <div className="w-1.5 h-8 bg-[#14B8A6] rounded-full animate-pulse delay-75"></div>
+                  <div className="w-1.5 h-8 bg-[#14B8A6] rounded-full animate-pulse"></div>
+                  <div className="w-1.5 h-3 bg-[#14B8A6]/40 rounded-full"></div>
+                  <div className="w-1.5 h-7 bg-[#14B8A6] rounded-full animate-pulse delay-75"></div>
                 </div>
                 <div className="flex flex-col items-end">
-                  <div className="text-[18px] font-black text-[#14B8A6] tracking-tighter leading-none mb-1">100%</div>
-                  <div className="text-[9px] font-bold text-gray-400 uppercase tracking-[0.1em]">Aligned</div>
+                  <div className="text-[18px] font-black text-[#14B8A6] tracking-tighter leading-none mb-1">Active</div>
+                  <div className="text-[9px] font-bold text-gray-400 uppercase tracking-[0.1em]">Tracking</div>
                 </div>
               </div>
             </motion.div>

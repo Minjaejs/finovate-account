@@ -23,9 +23,14 @@ const FreeTrial = () => {
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="max-w-[800px] mx-auto"
             >
-              <div className="inline-flex justify-center items-center gap-1.5 px-3 py-1.5 bg-yellow-400/10 border border-yellow-400/20 text-[#F5B324] rounded-md font-bold tracking-[0.2em] uppercase text-[10px] mb-8 shadow-sm">
-                <Zap className="w-3.5 h-3.5" />
-                Risk-Free Trial Offer
+              <div className="flex flex-wrap justify-center items-center gap-3 mb-8">
+                <div className="inline-flex justify-center items-center gap-1.5 px-3 py-1.5 bg-yellow-400/10 border border-yellow-400/20 text-[#F5B324] rounded-md font-bold tracking-[0.2em] uppercase text-[10px] shadow-sm">
+                  <Zap className="w-3.5 h-3.5" />
+                  Risk-Free Trial Offer
+                </div>
+                <div className="inline-flex justify-center items-center px-3 py-1.5 bg-red-500/10 border border-red-500/20 text-red-400 rounded-md font-bold tracking-[0.2em] uppercase text-[10px] shadow-sm animate-pulse">
+                  Limited Slots Available
+                </div>
               </div>
 
               <h2 className="text-[28px] lg:text-[36px] font-display font-bold tracking-[-0.02em] text-white mb-6 leading-[1.15]">
@@ -34,7 +39,7 @@ const FreeTrial = () => {
               </h2>
 
               <p className="text-[16px] md:text-[20px] text-blue-100/70 mb-10 max-w-[700px] mx-auto leading-[1.65] font-medium tracking-tight">
-                We offer a one-month <strong className="text-white">FREE trial</strong> for selected client bookkeeping. Evaluate work quality, communication standards, turnaround time, and cost efficiency before proceeding.
+                We offer a one-month <strong className="text-white">FREE trial</strong> for selected client bookkeeping. No commitment and no long-term contract required. Evaluate work quality, communication standards, turnaround time, and cost efficiency before proceeding.
               </p>
 
               <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-10 md:mb-12 text-white/90 tracking-tight font-medium">
@@ -47,11 +52,11 @@ const FreeTrial = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Button variant="primary" className="group text-[15px] font-display">
+                <Button variant="primary" className="group text-[16px] font-display !h-[50px] px-8 transition-all hover:-translate-y-0.5 tracking-tight">
                   Start Your Free Trial
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button variant="outline" className="border-[#334155]/60 text-white hover:bg-white/10 hover:border-white/30 font-display text-[15px] shadow-sm">
+                <Button variant="outline" className="border-[#334155]/60 text-white hover:bg-white/10 hover:border-white/30 font-display text-[16px] !h-[50px] px-8 transition-all hover:-translate-y-0.5 tracking-tight">
                   View Security Docs
                 </Button>
               </div>

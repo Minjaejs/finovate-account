@@ -25,20 +25,21 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:flex items-center space-x-2">
-            <div className="flex space-x-1 mr-6">
+            <div className="flex space-x-6 mr-8">
               {links.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="px-4 py-2 font-display font-bold text-[14.5px] text-[#1E2937] hover:bg-gray-50 hover:text-[#0F172A] rounded-full transition-colors duration-200"
+                  className="group relative px-2 py-2 font-display font-bold text-[14.5px] text-[#1E2937] hover:text-[#0F172A] transition-colors duration-200"
                 >
                   {link.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#14B8A6] transition-all duration-300 group-hover:w-full"></span>
                 </a>
               ))}
             </div>
-            <a href="#pricing">
-              <Button variant="primary" className="!h-[44px] px-6 font-display text-[14px]">
-                Start now
+            <a href="#contact" className="relative group">
+              <Button variant="primary" className="relative !h-[48px] px-8 font-display text-[15px] tracking-tight group-hover:-translate-y-0.5 transition-all">
+                Book Free Consultation
               </Button>
             </a>
           </div>
@@ -78,9 +79,9 @@ const Navbar = () => {
                   </a>
                 ))}
                 <div className="pt-4 pb-2 px-2 border-t border-gray-100 mt-2 space-y-3">
-                  <a href="#pricing">
-                    <Button variant="primary" className="w-full justify-center">
-                      Start now
+                  <a href="#contact">
+                    <Button variant="primary" className="w-full justify-center !h-[48px] text-[15px]">
+                      Book Free Consultation
                     </Button>
                   </a>
                 </div>

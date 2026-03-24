@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Home />
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

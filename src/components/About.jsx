@@ -1,7 +1,23 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
+import { motion, useMotionValue, useTransform, animate, useInView } from 'framer-motion';
 import Button from './ui/Button';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
+
+const Counter = ({ from, to, duration = 2, suffix = "" }) => {
+  const count = useMotionValue(from);
+  const rounded = useTransform(count, (latest) => Math.round(latest) + suffix);
+  const ref = React.useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-50px" });
+
+  useEffect(() => {
+    if (inView) {
+      const controls = animate(count, to, { duration: duration, ease: "easeOut" });
+      return controls.stop;
+    }
+  }, [count, to, duration, inView]);
+
+  return <motion.span ref={ref}>{rounded}</motion.span>;
+};
 
 const About = () => {
   return (
@@ -75,23 +91,38 @@ const About = () => {
                 We are a dedicated offshore outsourcing company providing high-quality accounting and operational support services to UK accounting firms.
               </p>
               <p>
-                Our mission is to help firms significantly reduce operational costs while maintaining the highest possible standards of accuracy, compliance, and efficiency.
+                Our mission is to help firms significantly reduce operational costs while maintaining the highest standards of accuracy, compliance, and efficiency.
+              </p>
+              <p className="font-bold text-[#0A2540]">
+                Our objective is simple: Reduce your staffing costs by 60–70% while improving productivity and scalability.
               </p>
             </div>
 
-            <div className="space-y-3 mb-10 bg-gray-50/50 p-6 rounded-[16px] border border-gray-100">
-              <div className="text-[#0A2540] font-bold text-[20px] font-display mb-4 tracking-tight">Our objective is simple:</div>
-              {[
-                'Reduce your firm’s staffing costs by 60–70%',
-                'Dramatically improve overall productivity',
-                'Ensure frictionless organizational scalability'
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#635BFF] shrink-0" />
-                  <span className="text-[#425466] font-semibold text-[15px]">{item}</span>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-10"
+            >
+              <div className="bg-white p-5 rounded-[16px] border border-gray-100 flex flex-col justify-center items-start shadow-[0_4px_20px_-5px_rgba(0,0,0,0.05)] hover:-translate-y-1 transition-transform">
+                <div className="text-[32px] sm:text-[36px] font-display font-black text-[#635BFF] mb-1 leading-none tracking-tighter">
+                  <Counter from={0} to={100} duration={2} suffix="+" />
                 </div>
-              ))}
-            </div>
+                <div className="text-[12px] font-bold text-[#425466] uppercase tracking-wider">Clients</div>
+              </div>
+              <div className="bg-white p-5 rounded-[16px] border border-gray-100 flex flex-col justify-center items-start shadow-[0_4px_20px_-5px_rgba(0,0,0,0.05)] hover:-translate-y-1 transition-transform">
+                <div className="text-[32px] sm:text-[36px] font-display font-black text-[#00D4FF] mb-1 leading-none tracking-tighter">
+                  <Counter from={0} to={99} duration={2} suffix="%" />
+                </div>
+                <div className="text-[12px] font-bold text-[#425466] uppercase tracking-wider">Accuracy</div>
+              </div>
+              <div className="bg-white p-5 rounded-[16px] border border-gray-100 flex flex-col justify-center items-start col-span-2 md:col-span-1 shadow-[0_4px_20px_-5px_rgba(0,0,0,0.05)] hover:-translate-y-1 transition-transform">
+                <div className="text-[32px] sm:text-[36px] font-display font-black text-[#10B981] mb-1 leading-none tracking-tighter">
+                  <Counter from={0} to={60} duration={2} suffix="%" />
+                </div>
+                <div className="text-[12px] font-bold text-[#425466] uppercase tracking-wider">Cost Savings</div>
+              </div>
+            </motion.div>
 
             <Button variant="primary" className="group px-8 text-[15px] font-display">
               Partner With Us
