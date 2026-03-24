@@ -27,15 +27,14 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${scrolled ? 'py-3' : 'py-5'}`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className={`relative flex justify-between items-center transition-all duration-500 ease-in-out px-6 rounded-[22px] ${scrolled ? 'h-14 bg-white/80 backdrop-blur-xl shadow-lg' : 'h-16 bg-transparent'}`}>
-          
-          <div className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-brand-primary flex items-center justify-center shadow-[0_4px_12px_rgba(20,184,166,0.3)] transition-transform duration-500 group-hover:rotate-12">
-              <span className="text-white font-black text-[18px]">F</span>
-            </div>
-            <a href="#home" className="text-[20px] font-display font-black text-brand-dark tracking-tighter transition-all duration-300">
-              Finovate
-            </a>
-          </div>
+
+          <a href="#home" className="flex items-center group">
+            <img
+              src="/logo.png"
+              alt="Finovate Logo"
+              className="h-40 w-auto transition-all duration-300 group-hover:scale-103"
+            />
+          </a>
 
           <div className="hidden lg:flex items-center">
             <div className="flex space-x-9 mr-9">
@@ -51,8 +50,8 @@ const Navbar = () => {
               ))}
             </div>
             <a href="#contact">
-              <Button 
-                variant="primary" 
+              <Button
+                variant="primary"
                 className={`transition-all duration-500 !h-10 px-5 text-[13px] font-display shadow-sm hover:shadow-premium ${scrolled ? 'bg-brand-primary' : 'bg-brand-dark'}`}
               >
                 Consultation
