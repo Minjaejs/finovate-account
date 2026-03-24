@@ -1,30 +1,24 @@
 import React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ArrowRight, Activity, TrendingUp, ShieldCheck, ChevronRight, BarChart3, PieChart } from 'lucide-react';
 import Button from './ui/Button';
 
 const Hero = () => {
-  const { scrollY } = useScroll();
-  const y1 = useTransform(scrollY, [0, 500], [0, 90]);
-  const y2 = useTransform(scrollY, [0, 500], [0, -60]);
-  const opacity = useTransform(scrollY, [0, 300], [1, 0.2]);
-
   return (
-    <section id="home" className="relative pt-[100px] pb-24 lg:pt-[120px] lg:pb-[140px] overflow-hidden bg-white">
+    <section id="home" className="relative pt-[100px] pb-24 lg:pt-[120px] lg:pb-[140px] overflow-hidden bg-white z-10">
       {/* Precision Sweeping Background Stripe Style */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-[80vw] lg:w-[60vw] h-full bg-[#F6F9FC] transform -skew-x-12 translate-x-32 z-0" />
         <div className="absolute inset-0 bg-mesh opacity-[0.8] z-0 mix-blend-multiply" />
       </div>
 
       {/* Precision Geometric Slant Cut */}
-      <div className="absolute bottom-0 left-0 right-0 h-[80px] lg:h-[150px] bg-white transform -skew-y-2 origin-bottom-left z-10" />
+      <div className="absolute bottom-0 left-0 right-0 h-[80px] lg:h-[150px] bg-white transform -skew-y-2 origin-bottom-left z-10 pointer-events-none" />
 
       <div className="max-w-[1300px] mx-auto px-6 sm:px-8 lg:px-12 relative z-20">
         <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 items-center">
 
           <motion.div
-            style={{ opacity }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
@@ -81,7 +75,6 @@ const Hero = () => {
           <div className="relative w-full max-w-[650px] mx-auto lg:ml-auto h-[450px] lg:h-[600px] z-20 hidden md:block perspective-[2000px]">
 
             <motion.div
-              style={{ y: y1 }}
               initial={{ opacity: 0, rotateX: 10, rotateY: -10, rotateZ: 2, scale: 0.95 }}
               animate={{ opacity: 1, rotateX: 5, rotateY: -5, rotateZ: 2, scale: 1 }}
               transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
@@ -109,7 +102,6 @@ const Hero = () => {
 
             {/* Overlapping Precision Widget */}
             <motion.div
-              style={{ y: y2 }}
               initial={{ opacity: 0, x: -80, y: 50 }}
               animate={{ opacity: 1, x: -40, y: 30 }}
               transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}

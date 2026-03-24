@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BookOpen, FileText, PieChart, PoundSterling, Users, ShieldCheck, ArrowRight } from 'lucide-react';
+import { BookOpen, FileText, PieChart, PoundSterling, Users, ShieldCheck, ArrowRight, Laptop } from 'lucide-react';
 
 const services = [
   {
@@ -32,6 +32,11 @@ const services = [
     title: 'Tax Compliance',
     description: 'Complex strategic tax planning and corporate tax return (CT600) filing handled in isolated environments.',
     icon: <ShieldCheck className="w-[20px] h-[20px] text-[#10B981]" />
+  },
+  {
+    title: 'MTD for ITSA',
+    description: 'Mandatory digital records and quarterly reporting via compatible software for self-employed individuals and landlords.',
+    icon: <Laptop className="w-[20px] h-[20px] text-[#14B8A6]" />
   }
 ];
 
@@ -64,7 +69,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+        <div className="flex flex-wrap justify-center gap-4 lg:gap-5">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -72,16 +77,16 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.05 * index, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="group"
+              className="group w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-14px)] xl:w-[calc(25%-15px)] flex"
             >
-              <div className="card-premium h-full bg-white border border-gray-200/80 p-6 relative z-10 overflow-hidden flex flex-col sm:flex-row gap-5 items-start hover:-translate-y-1 transition-transform duration-300 ease-out cursor-default hover:border-[#14B8A6]/30">
-                <div className="shrink-0 w-[46px] h-[46px] rounded-[14px] bg-[#F8FAFC] flex items-center justify-center border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.02)] group-hover:bg-white group-hover:shadow-[0_4px_12px_rgba(20,184,166,0.15)] group-hover:scale-110 transition-all duration-400 ease-[0.16_1_0.3_1]">
+              <div className="card-premium h-full w-full bg-white border border-gray-200/80 p-5 relative z-10 overflow-hidden flex flex-col gap-3.5 items-start hover:-translate-y-1 transition-transform duration-300 ease-out cursor-default hover:border-[#14B8A6]/30">
+                <div className="shrink-0 w-[42px] h-[42px] rounded-[12px] bg-[#F8FAFC] flex items-center justify-center border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.02)] group-hover:bg-white group-hover:shadow-[0_4px_12px_rgba(20,184,166,0.15)] group-hover:scale-110 transition-all duration-400 ease-[0.16_1_0.3_1]">
                   {service.icon}
                 </div>
 
                 <div className="flex-1">
-                  <h3 className="text-[17px] font-display font-bold text-[#0F172A] mb-2 tracking-tight group-hover:text-[#14B8A6] transition-colors">{service.title}</h3>
-                  <p className="text-[14px] text-[#1E2937] leading-[1.6] opacity-80 font-medium tracking-tight">
+                  <h3 className="text-[16px] font-display font-bold text-[#0F172A] tracking-tight group-hover:text-[#14B8A6] transition-colors">{service.title}</h3>
+                  <p className="text-[13.5px] text-[#1E2937] leading-[1.5] opacity-80 font-medium tracking-tight mt-1">
                     {service.description}
                   </p>
                 </div>

@@ -31,11 +31,11 @@ const Testimonials = () => {
 
   return (
     <section className="py-16 md:py-24 bg-[#F6F9FC] relative overflow-hidden text-center">
-      
+
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         <div className="mb-12">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -43,7 +43,7 @@ const Testimonials = () => {
           >
             Client Success
           </motion.div>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -57,7 +57,7 @@ const Testimonials = () => {
           {/* Subtle quotemarks */}
           <Quote className="absolute -top-4 -left-4 md:-top-6 md:-left-6 w-16 h-16 text-[#635BFF] opacity-10 transform -rotate-12" />
           <Quote className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 w-16 h-16 text-[#00D4FF] opacity-10 transform rotate-[168deg]" />
-          
+
           <div className="relative min-h-[200px] flex items-center justify-center">
             <AnimatePresence mode="wait">
               <motion.div
@@ -85,7 +85,7 @@ const Testimonials = () => {
           </div>
 
           <div className="flex justify-center items-center gap-6 mt-10 relative z-10">
-            <button 
+            <button
               onClick={prev}
               className="p-3 rounded-full bg-gray-50 border border-gray-200 text-[#0A2540] hover:bg-white hover:border-[#635BFF] hover:text-[#635BFF] hover:shadow-[0_4px_10px_-2px_rgba(99,91,255,0.2)] transition-all duration-300"
               aria-label="Previous testimonial"
@@ -94,7 +94,7 @@ const Testimonials = () => {
             </button>
             <div className="flex gap-2">
               {testimonials.map((_, i) => (
-                <button 
+                <button
                   key={i}
                   onClick={() => setCurrentIndex(i)}
                   className={`h-2 rounded-full transition-all duration-500 ${i === currentIndex ? 'bg-[#635BFF] w-8 shadow-[0_0_8px_rgba(99,91,255,0.4)]' : 'bg-gray-200 hover:bg-gray-300 w-2'}`}
@@ -102,7 +102,7 @@ const Testimonials = () => {
                 />
               ))}
             </div>
-            <button 
+            <button
               onClick={next}
               className="p-3 rounded-full bg-gray-50 border border-gray-200 text-[#0A2540] hover:bg-white hover:border-[#635BFF] hover:text-[#635BFF] hover:shadow-[0_4px_10px_-2px_rgba(99,91,255,0.2)] transition-all duration-300"
               aria-label="Next testimonial"

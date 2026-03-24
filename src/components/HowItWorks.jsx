@@ -15,25 +15,25 @@ const HowItWorks = () => {
     <section ref={containerRef} className="py-24 md:py-32 bg-[#0F172A] relative z-0">
       {/* Immersive Background Architecture */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-         <div className="absolute top-0 right-1/4 w-[800px] h-[800px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#14B8A6]/10 via-[#6366F1]/5 to-transparent rounded-full blur-[120px] mix-blend-screen opacity-60"></div>
-         <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#10B981]/10 via-teal-900/10 to-transparent rounded-full blur-[100px] mix-blend-screen opacity-50"></div>
-         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03] mix-blend-overlay"></div>
+        <div className="absolute top-0 right-1/4 w-[800px] h-[800px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#14B8A6]/10 via-[#6366F1]/5 to-transparent rounded-full blur-[120px] mix-blend-screen opacity-60"></div>
+        <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#10B981]/10 via-teal-900/10 to-transparent rounded-full blur-[100px] mix-blend-screen opacity-50"></div>
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03] mix-blend-overlay"></div>
       </div>
-      
+
       <div className="max-w-[1300px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        
+
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-10 mb-20 lg:mb-28">
-           <div className="max-w-[650px]">
-             <motion.div 
-               initial={{ opacity: 0, y: -10 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               viewport={{ once: true }}
-               className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#14B8A6]/10 text-[#14B8A6] font-bold text-[11px] uppercase tracking-[0.2em] mb-6 border border-[#14B8A6]/20 rounded-md shadow-sm"
-             >
-               <span className="w-1.5 h-1.5 rounded-full bg-[#14B8A6] shadow-[0_0_8px_rgba(20,184,166,0.8)] animate-pulse"></span>
-               Deployment Engine
+          <div className="max-w-[650px]">
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#14B8A6]/10 text-[#14B8A6] font-bold text-[11px] uppercase tracking-[0.2em] mb-6 border border-[#14B8A6]/20 rounded-md shadow-sm"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-[#14B8A6] shadow-[0_0_8px_rgba(20,184,166,0.8)] animate-pulse"></span>
+              Deployment Engine
             </motion.div>
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, delay: 0.1 }}
@@ -44,7 +44,7 @@ const HowItWorks = () => {
             </motion.h2>
           </div>
           <div className="max-w-[420px] pb-3">
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, delay: 0.2 }}
@@ -59,7 +59,7 @@ const HowItWorks = () => {
         <div className="relative">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 relative z-10">
             {steps.map((step, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}

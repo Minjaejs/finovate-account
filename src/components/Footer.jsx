@@ -6,11 +6,11 @@ const Footer = () => {
 
   return (
     <footer className="bg-white pt-24 pb-12 text-[#425466] relative overflow-hidden border-t border-gray-100">
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20">
-          
+
           <div className="lg:col-span-5 pr-0 lg:pr-10">
             <a href="#home" className="text-[28px] font-display font-black text-[#0A2540] tracking-tight mb-6 inline-block hover:text-[#635BFF] transition-colors">
               Finovate
@@ -52,12 +52,12 @@ const Footer = () => {
               Subscribe for industry insights and scalability tips.
             </p>
             <div className="relative mb-8">
-              <input 
-                type="email" 
-                placeholder="Email address" 
+              <input
+                type="email"
+                placeholder="Email address"
                 className="w-full bg-white border border-gray-200 rounded-[12px] px-4 py-3 text-[#0A2540] placeholder-gray-400 focus:outline-none focus:border-[#635BFF] focus:ring-4 focus:ring-[#635BFF]/10 transition-all text-[14px] font-medium"
               />
-              <button 
+              <button
                 className="absolute right-1 top-1 bottom-1 px-4 bg-[#635BFF] hover:bg-[#524BCC] text-white rounded-[10px] font-display font-bold text-[13px] transition-colors shadow-sm"
                 aria-label="Subscribe"
               >
@@ -65,10 +65,10 @@ const Footer = () => {
               </button>
             </div>
             <a href="mailto:contact@finovate.io" className="flex items-center gap-3 text-[#425466] hover:text-[#00D4FF] transition-colors group">
-               <div className="p-2 bg-gray-50 rounded-[8px] border border-gray-200 group-hover:bg-[#00D4FF]/10 group-hover:border-[#00D4FF]/30 transition-colors">
-                 <Mail className="w-4 h-4" />
-               </div>
-               <span className="font-semibold tracking-wide text-[14px]">contact@finovate.io</span>
+              <div className="p-2 bg-gray-50 rounded-[8px] border border-gray-200 group-hover:bg-[#00D4FF]/10 group-hover:border-[#00D4FF]/30 transition-colors">
+                <Mail className="w-4 h-4" />
+              </div>
+              <span className="font-semibold tracking-wide text-[14px]">contact@finovate.io</span>
             </a>
           </div>
         </div>
@@ -76,9 +76,9 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-gray-100 text-[13px] font-medium tracking-wide">
           <p>&copy; {currentYear} Finovate Outsourcing Ltd.</p>
           <div className="flex gap-6">
-             <a href="#" className="hover:text-[#0A2540] transition-colors">Privacy</a>
-             <a href="#" className="hover:text-[#0A2540] transition-colors">Terms</a>
-             <a href="#" className="hover:text-[#0A2540] transition-colors">Cookie Policy</a>
+            <a href="#" className="hover:text-[#0A2540] transition-colors">Privacy</a>
+            <a href="#" className="hover:text-[#0A2540] transition-colors">Terms</a>
+            <a href="#" className="hover:text-[#0A2540] transition-colors">Cookie Policy</a>
           </div>
         </div>
 

@@ -17,10 +17,10 @@ const Security = () => {
       <div className="absolute -top-[300px] right-[100px] w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#00D4FF]/20 via-[#635BFF]/5 to-transparent rounded-full blur-[100px] pointer-events-none"></div>
 
       <div className="max-w-[1300px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        
+
         <div className="grid lg:grid-cols-12 gap-16 lg:gap-12 items-center">
           <div className="lg:col-span-5 relative pr-0 lg:pr-10">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -29,8 +29,8 @@ const Security = () => {
             >
               Enterprise Security
             </motion.div>
-            
-            <motion.h2 
+
+            <motion.h2
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, delay: 0.1 }}
@@ -38,8 +38,8 @@ const Security = () => {
             >
               Data Security & <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00D4FF] via-emerald-300 to-[#10B981]">Confidentiality.</span>
             </motion.h2>
-            
-            <motion.p 
+
+            <motion.p
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, delay: 0.2 }}
@@ -48,10 +48,10 @@ const Security = () => {
               We strictly follow GDPR-compliant processes supported by structured internal data protection controls. Confidentiality agreements, controlled data access, and monitored workflows ensure your firm’s information and your clients’ privacy remain fully protected at all times.
             </motion.p>
           </div>
-          
+
           <div className="lg:col-span-7 grid sm:grid-cols-2 gap-6">
             {securityFeatures.map((feature, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -65,10 +65,10 @@ const Security = () => {
                     </div>
                   </div>
                   <div>
-                     <h3 className="text-[18px] font-display font-bold mb-3 text-white tracking-tight">{feature.title}</h3>
-                     <p className="text-blue-50/60 text-[14px] leading-[1.65] font-medium tracking-tight">
-                       {feature.text}
-                     </p>
+                    <h3 className="text-[18px] font-display font-bold mb-3 text-white tracking-tight">{feature.title}</h3>
+                    <p className="text-blue-50/60 text-[14px] leading-[1.65] font-medium tracking-tight">
+                      {feature.text}
+                    </p>
                   </div>
                 </div>
               </motion.div>

@@ -7,11 +7,11 @@ const About = () => {
   return (
     <section id="about" className="py-16 md:py-24 bg-white relative overflow-hidden">
       <div className="absolute top-0 right-0 -mr-40 mt-32 w-[500px] h-[500px] bg-[#635BFF]/5 rounded-full blur-[120px] pointer-events-none" />
-      
+
       <div className="max-w-[1300px] mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -20,16 +20,16 @@ const About = () => {
             {/* Main Image with modern offset */}
             <div className="relative z-10 rounded-[24px] overflow-hidden shadow-super-layered border-[6px] border-white/50 aspect-[4/5] bg-gray-100 group">
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent z-10"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1554200876-56c2f25224fa?q=80&w=2070&auto=format&fit=crop" 
-                alt="Finovate Expertise" 
+              <img
+                src="https://images.unsplash.com/photo-1554200876-56c2f25224fa?q=80&w=2070&auto=format&fit=crop"
+                alt="Finovate Expertise"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-[0.16_1_0.3_1]"
                 loading="lazy"
               />
             </div>
-            
+
             {/* Floating stat card 1 */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, delay: 0.2 }}
@@ -42,9 +42,9 @@ const About = () => {
                 </div>
               </div>
             </motion.div>
-            
+
             {/* Floating stat card 2 */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, delay: 0.4 }}
@@ -55,7 +55,7 @@ const About = () => {
             </motion.div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -64,15 +64,15 @@ const About = () => {
             <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50/80 text-[#635BFF] font-black text-[10px] uppercase tracking-[0.2em] mb-6 border border-blue-100/80 rounded-[8px]">
               About Us
             </div>
-            
+
             <h2 className="text-[28px] lg:text-[36px] font-display font-bold tracking-[-0.02em] text-[#0A2540] leading-[1.15] mb-6">
               Elite operational support. <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00D4FF] to-[#635BFF]">Unmatched efficiency.</span>
             </h2>
-            
+
             <div className="space-y-4 text-[16px] lg:text-[18px] text-[#425466] mb-8 leading-[1.6] font-medium border-l-[3px] border-[#635BFF] pl-5 md:pl-6 ml-1">
               <p>
-                We are a dedicated offshore outsourcing company providing high-quality accounting and operational support services to UK accounting firms. 
+                We are a dedicated offshore outsourcing company providing high-quality accounting and operational support services to UK accounting firms.
               </p>
               <p>
                 Our mission is to help firms significantly reduce operational costs while maintaining the highest possible standards of accuracy, compliance, and efficiency.
